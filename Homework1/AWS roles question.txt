@@ -1,0 +1,5 @@
+Q: Assume you have IAM Role attached to EC2 instance, and nothing in environment variables 
+or .~/aws/config file. Where awscli / sdk finds secret key and access key?
+
+
+A: call an AWS STS API to get the temporary credentials, and then use them explicitly to make calls to AWS services
