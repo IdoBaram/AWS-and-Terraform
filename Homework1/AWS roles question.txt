@@ -3,6 +3,8 @@ or .~/aws/config file. Where awscli / sdk finds secret key and access key?
 
 
 A: call an AWS STS API to get the temporary credentials, and then use them explicitly to make calls to AWS services,
-by retrieving security credentials from Instance Metadata - An application on the instance retrieves the security credentials provided by the role from the instance metadata item iam/security-credentials/role-name.
-The application is granted the permissions for the actions and resources that you've defined for the role through the security credentials associated with the role.
+by retrieving security credentials from Instance Metadata - An application on the instance retrieves the security credentials provided
+by the role from the instance metadata item iam/security-credentials/role-name.
+The application is granted the permissions for the actions and resources that you've defined for the role through the security
+credentials associated with the role.
 These security credentials are temporary and we rotate them automatically.
